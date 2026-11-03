@@ -16,34 +16,64 @@ body {
   padding: 20px;
   text-align: center;
   padding: 20px;
+  background-color: var(--color-1);
+  font-size: 24px;
+  font-weight: bold;
+}
 
+.logo {
+  width: 66px;
+  margin-right: 10px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 24px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--color-5);
+  padding: 8px 12px;
+  transition: all 0.2s ease;
 }
 
 .middle {
   display: flex;
   flex: 1;
+  background-color: var(--color-2);
 }
 
+  .left-sidebar,
+  .right-sidebar {
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 0 0 100px;
 
-.left-sidebar,
-.right-sidebar {
-  gap: 15px;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 0 0 100px;
-
-}
+  }
 
 
-.main-content {
-  flex: 1 0 auto;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border-radius: 10px;
-  gap: 15px;
-  text-align: center;
-  justify-content: space-around;
+  .main-content {
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    text-align: center;
+    justify-content: space-around;
 
-}
+  }
 
+  :root {
+  --color-1: #F7C370;
+  --color-2: #F3C3B5;
+  --color-3: #91C2C7;
+  --color-4: #F3898B;
+  --color-5: #3D5788;
+  }
