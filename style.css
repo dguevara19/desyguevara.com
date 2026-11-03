@@ -15,15 +15,16 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  padding: 20px;
+  margin: 5px;
   background-color: var(--color-1);
   font-size: 24px;
   font-weight: bold;
 }
 
 .logo {
-  width: 66px;
+  width: 100px;
   margin-right: 10px;
+  align-items: center;
 }
 
 .nav-list {
@@ -46,8 +47,14 @@ body {
   display: flex;
   flex: 1;
   background-color: var(--color-2);
+  justify-content: center;
 }
 
+.headshot {
+  height: 200px;
+  width: auto;
+  justify-content: center;
+}
   .left-sidebar,
   .right-sidebar {
     gap: 15px;
@@ -77,3 +84,17 @@ body {
   --color-4: #F3898B;
   --color-5: #3D5788;
   }
+
+div.scroll-container {
+  background-color: var(--color-3);
+  overflow: auto;
+  white-space:wrap;
+  padding: 10px;
+  size: 200px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+  width: 200px;
+  height: auto;
+}
