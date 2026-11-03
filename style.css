@@ -1,7 +1,9 @@
+
 html,
 body {
   margin: 0;
   height: 100%;
+  font-family: Swansea;
 }
 
 .page {
@@ -9,22 +11,35 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
+img {
+  max-width: 100%;
+  display: block;
+}
 
 
-.header,
-.footer {
+header,
+footer {
   padding: 20px;
   text-align: center;
+  padding: 20px;
   margin: 5px;
   background-color: var(--color-1);
   font-size: 24px;
   font-weight: bold;
 }
-
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 .logo {
+  width: 66px;
   width: 100px;
   margin-right: 10px;
-  align-items: center;
+ 
 }
 
 .nav-list {
@@ -43,7 +58,7 @@ body {
   transition: all 0.2s ease;
 }
 
-.middle {
+main {
   display: flex;
   flex: 1;
   background-color: var(--color-2);
@@ -84,6 +99,7 @@ body {
   --color-4: #F3898B;
   --color-5: #3D5788;
   }
+  
 
 div.scroll-container {
   background-color: var(--color-3);
@@ -97,4 +113,12 @@ div.scroll-container img {
   padding: 10px;
   width: 200px;
   height: auto;
+}
+
+.container {
+  display: flex;         
+  flex-wrap: wrap;     
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: auto
 }
