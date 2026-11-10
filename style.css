@@ -1,9 +1,8 @@
-
-html,
-body {
+css
+html, body {
   margin: 0;
   height: 100%;
-  font-family: Swansea;
+  font-family: 'Swansea'; 
 }
 
 .page {
@@ -11,22 +10,21 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
+
 img {
   max-width: 100%;
   display: block;
 }
 
-
-header,
-footer {
-  padding: 20px;
-  text-align: center;
+header, footer {
   padding: 20px;
   margin: 5px;
+  text-align: center;
   background-color: var(--color-1);
   font-size: 24px;
   font-weight: bold;
 }
+
 .nav-bar {
   display: flex;
   align-items: center;
@@ -35,11 +33,10 @@ footer {
   padding: 0;
   margin: 0;
 }
+
 .logo {
-  width: 66px;
-  width: 100px;
+  width: 100px; 
   margin-right: 10px;
- 
 }
 
 .nav-list {
@@ -68,45 +65,46 @@ main {
 .headshot {
   height: 200px;
   width: auto;
-  justify-content: center;
+
 }
-  .left-sidebar,
-  .right-sidebar {
-    gap: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 0 0 100px;
 
-  }
+.left-sidebar,
+.right-sidebar {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 0 0 100px;
+}
 
+.main-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 15px;
+  text-align: center;
+  justify-content: space-around;
+}
 
-  .main-content {
-    flex: 1 0 auto;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 15px;
-    text-align: center;
-    justify-content: space-around;
-
-  }
-
-  :root {
+:root {
   --color-1: #F7C370;
   --color-2: #F3C3B5;
   --color-3: #91C2C7;
   --color-4: #F3898B;
   --color-5: #3D5788;
-  }
-  
+}
 
 div.scroll-container {
   background-color: var(--color-3);
   overflow: auto;
-  white-space:wrap;
+  white-space: normal; 
   padding: 10px;
-  size: 200px;
+  width: 200px; 
+  height: 200px;
 }
 
 div.scroll-container img {
@@ -116,9 +114,123 @@ div.scroll-container img {
 }
 
 .container {
-  display: flex;         
-  flex-wrap: wrap;     
+  display: flex;
+  flex-wrap: wrap;
   box-sizing: border-box;
+  max-width: 60%;
+  overflow: auto;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
   max-width: 100%;
-  overflow: auto
+  padding: 10px;
+}
+
+.scroll-wrapper {
+  display: flex;
+  gap: 15px;
+  width: max-content;
+}
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 220px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item span {
+  display: block;
+  padding: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 6px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.modal-content h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.modal-content p {
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #333;
 }

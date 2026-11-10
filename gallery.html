@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desy Guevara- Gallery </title>
+    <title>Desy Guevara - Gallery</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="interactionsheet" href="interaction.js">
+    <script src="interaction.js"></script>
 </head>
 
 <body>
@@ -14,11 +14,10 @@
 
         <header>
             <nav>
-
                 <ul class="nav-bar">
                     <li><img class="logo" src="logo.png" alt="Logo"></li>
                     <ul class="nav-list">
-                        <li><a href="index.html" target="_blank" rel="noopener"> Home</a></li>
+                        <li><a href="index.html" target="_blank" rel="noopener">Home</a></li>
                         <li><a href="gallery.html" target="_blank" rel="noopener">Gallery</a></li>
                         <li><a href="about.html" target="_blank" rel="noopener">About</a></li>
                     </ul>
@@ -27,36 +26,52 @@
         </header>
 
         <main>
-
             <div class="left-sidebar">
-                Left Sidebar
+                take a look at some of my work! <br> click on the images to learn more about them!
             </div>
 
             <div class="main-content">
+                <div class="gallery-container">
+                    <div class="scroll-wrapper" id="scrollGallery">
+                        
+                        <div class="gallery-item">
+                            <img src="slide.PNG" alt="slide"
+                                onclick="openModal('Slide', 'Inspired by toothpaste, this piece explores the fluidity of color and form, creating a dynamic visual experience that captivates the viewer whilst including a funny image of a cat.')">
+                            <span>Slide</span>
+                        </div>
 
+                        <div class="gallery-item">
+                            <img src="pumpkin1.png" alt="pumpkin 1"
+                                onclick="openModal('pumpkin', '')">
+                            <span>Pumpkin</span>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="strawberry.PNG" alt="Strawberry"
+                                onclick="openModal('Strawberry', '')">
+                            <span>Strawberry</span>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="melt.PNG" alt="melt"
+                                onclick="openModal('Melt', '')">
+                            <span>Melt</span>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
-
-            <div class="scroll-container">
-                <img src="slide.PNG" alt="slide">
-                <img src="pumpkin1.png" alt="pumpkin 1">
-                <img src="strawberry.PNG" alt="Strawberry">
-                <img src="melt.PNG" alt="melt">
-            </div>
-
-
-            <div class="right-sidebar">
-                Right Sidebar
-            </div>
-
         </main>
 
         <footer class="footer">
-            Footer
+            <a href="mailto:guevaradesy@gmail.com">Contact me</a>
+            <br>
             <a href="index.html">Back to Home</a>
         </footer>
 
     </div>
 </body>
+
+</html>
 
 </html>
